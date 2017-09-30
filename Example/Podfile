@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MattKit_Example' do
+  pod 'MattKit', :path => '../'
+
+  target 'MattKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
