@@ -8,8 +8,19 @@
 import Foundation
 import PromiseKit
 
+public protocol WebClientJSONParser {
+    func decode<T>(_ type: T.Type, from data: Data) throws -> T where T : Decodable
+}
+
+extension JSONDecoder: WebClientJSONParser {}
+
 public class WebClient {
-    public init() {}
+    
+    public init(urlSession: URLSession = URLSession.shared, parser: WebClientJSONParser = JSONDecoder()) {
+        self.parser = parser
+        self.urlSession = urlSession
+    }
+    
     public enum RESTMethod {
         case GET
         case POST(params: [String: Any])
@@ -33,6 +44,8 @@ public class WebClient {
         }
     }
     
+    private var urlSession: URLSession
+    private var parser: WebClientJSONParser
     private var parsingQueue = DispatchQueue(label: "com.mattkit.web_parse_queue",
                                              qos: .userInitiated,
                                              attributes: DispatchQueue.Attributes.concurrent)
@@ -41,8 +54,9 @@ public class WebClient {
         return Promise { resolve, reject in
             do {
                 let urlRequest = try RequestFactory.request(for: url, headers: headers, method: method)
-                URLSession.shared.dataTask(with: urlRequest).then(on: parsingQueue) { result -> Void in
-                    let mapped = try JSONDecoder().decode(T.self, from: result)
+                urlSession.dataTask(with: urlRequest).then(on: parsingQueue) {[weak self] result -> Void in
+                    guard let `self` = self else { return }
+                    let mapped = try self.parser.decode(T.self, from: result)
                     resolve(mapped)
                 }.catch { error in
                     reject(error)

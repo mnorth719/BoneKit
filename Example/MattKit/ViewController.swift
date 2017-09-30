@@ -7,11 +7,22 @@
 //
 
 import UIKit
+import MattKit
+
+struct Menu: Codable {
+    var title: String
+}
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let webClient = WebClient()
+        webClient.request(URL(string: "")!, headers: nil, method: .GET).then { (result: Menu) in
+            print(result)
+        }.always {
+            // stop loading
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 

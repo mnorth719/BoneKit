@@ -12,7 +12,8 @@
 		1773A1250EFE29CF959D018733B6F11A /* when.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D29D2F64D48281095C8274FEE6DACD0 /* when.swift */; };
 		1E04659F8D78CD137A869C55CE9B1C3A /* AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCDD0F4DEC7B45ED67BDA259AA0495C /* AnyPromise.m */; };
 		20111DEBC6C19943081952F4BB708CD7 /* AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 01FE4B605FCF6F5D282413F2C6FEDFD4 /* AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22CD18AB1F7F75DF001F46DB /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD18AA1F7F75DF001F46DB /* WebClient.swift */; };
+		22CD18B21F802ED2001F46DB /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD18B11F802ED2001F46DB /* StringExtensions.swift */; };
+		22E003E31F802FD100E7F87D /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E003E21F802FD100E7F87D /* WebClient.swift */; };
 		241DC888CA607E9EE3F3AA95FBFB466F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F82E67A30841B8EA38FFE9317D477D /* UIKit.framework */; };
 		27AE81F25C4BBDE46AF50791C8166013 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8F25817235857AE113B60CE73F1492 /* PromiseKit.framework */; };
 		29ABB0AC3970299B4B267AA278462F4D /* after.swift in Sources */ = {isa = PBXBuildFile; fileRef = B660E1F4E80FD3F4BF33455CD40AA754 /* after.swift */; };
@@ -112,7 +113,8 @@
 		1B2B66BAB51D08D378DE7E56BED77CA1 /* MattKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MattKit-dummy.m"; sourceTree = "<group>"; };
 		1DBBCF038A033FBF591B05C0FA593946 /* GlobalState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GlobalState.m; path = Sources/GlobalState.m; sourceTree = "<group>"; };
 		1E33654BE09E7109A0FEEE76E49BF8E0 /* NSTask+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTask+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSTask+AnyPromise.m"; sourceTree = "<group>"; };
-		22CD18AA1F7F75DF001F46DB /* WebClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebClient.swift; path = ../Networking/WebClient.swift; sourceTree = "<group>"; };
+		22CD18B11F802ED2001F46DB /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		22E003E21F802FD100E7F87D /* WebClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebClient.swift; sourceTree = "<group>"; };
 		294026AB8B28C610FC57DF2A26EB7FC9 /* NSNotificationCenter+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSNotificationCenter+Promise.swift"; path = "Extensions/Foundation/Sources/NSNotificationCenter+Promise.swift"; sourceTree = "<group>"; };
 		2C2909988A3E76370EDD989D3372226E /* Pods-MattKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MattKit_Tests.modulemap"; sourceTree = "<group>"; };
 		2C6823BF3BB1566E1F8C86FABE5F23DA /* wrap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = wrap.swift; path = Sources/wrap.swift; sourceTree = "<group>"; };
@@ -249,19 +251,12 @@
 		22CD18A81F7F74CF001F46DB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				22E003E21F802FD100E7F87D /* WebClient.swift */,
 				7CFB8FDF883C2A1D9880177A24B2336F /* Atomic.swift */,
 				E502912211CCDD36FD4004E7A0C712CC /* Observable.swift */,
+				22CD18B11F802ED2001F46DB /* StringExtensions.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		22CD18A91F7F74E5001F46DB /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				22CD18AA1F7F75DF001F46DB /* WebClient.swift */,
-			);
-			name = Networking;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		38908CA03A120B329909CCDB1910CD05 /* PromiseKit */ = {
@@ -485,7 +480,6 @@
 		F02A503FEC564E1529CAC931FA614EC6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				22CD18A91F7F74E5001F46DB /* Networking */,
 				22CD18A81F7F74CF001F46DB /* Utils */,
 				6761DA263D2DDA406BCC18260271F204 /* Custom Controls */,
 			);
@@ -689,11 +683,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22CD18B21F802ED2001F46DB /* StringExtensions.swift in Sources */,
 				F36485F7660B71CEC57290AC43466F6D /* Atomic.swift in Sources */,
 				57EC14B649D0541F71E8101D7E447DD9 /* BorderedButton.swift in Sources */,
 				C9DC956B4F425214507F204D645273EA /* MattKit-dummy.m in Sources */,
-				22CD18AB1F7F75DF001F46DB /* WebClient.swift in Sources */,
 				6E826EA8088ABB99ABE75381D74692EA /* Observable.swift in Sources */,
+				22E003E31F802FD100E7F87D /* WebClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
