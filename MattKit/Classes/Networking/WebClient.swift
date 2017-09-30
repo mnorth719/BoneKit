@@ -9,6 +9,7 @@ import Foundation
 import PromiseKit
 
 public class WebClient {
+    public init() {}
     public enum RESTMethod {
         case GET
         case POST(params: [String: Any])

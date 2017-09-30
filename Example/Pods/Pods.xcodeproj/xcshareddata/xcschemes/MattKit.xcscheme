@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0900"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "99657F9816FD02EFD95432BE2B866487"
+               BlueprintIdentifier = "73F00B2D8F3888FB35BBC30C6E2E13B8"
                BuildableName = "MattKit.framework"
                BlueprintName = "MattKit"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "99657F9816FD02EFD95432BE2B866487"
+            BlueprintIdentifier = "73F00B2D8F3888FB35BBC30C6E2E13B8"
             BuildableName = "MattKit.framework"
             BlueprintName = "MattKit"
             ReferencedContainer = "container:Pods.xcodeproj">
