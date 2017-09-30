@@ -1,0 +1,6 @@
+framework module MattKit {
+  umbrella header "MattKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

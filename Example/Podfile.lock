@@ -1,0 +1,16 @@
+PODS:
+  - MattKit (0.1.0)
+
+DEPENDENCIES:
+  - MattKit (from `../`)
+
+EXTERNAL SOURCES:
+  MattKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MattKit: 58d73a7387d202ad012dc718d13b09582eb384a0
+
+PODFILE CHECKSUM: 17548d231d4098389b4e966255438bbc6dc886b4
+
+COCOAPODS: 1.2.1

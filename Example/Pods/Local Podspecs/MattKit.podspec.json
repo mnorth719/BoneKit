@@ -1,0 +1,22 @@
+{
+  "name": "MattKit",
+  "version": "0.1.0",
+  "summary": "A short description of MattKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Matt North/MattKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Matt North": "matt.north93@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Matt North/MattKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MattKit/Classes/**/*"
+}
