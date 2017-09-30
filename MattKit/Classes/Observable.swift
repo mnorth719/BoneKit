@@ -31,7 +31,7 @@
 
 import Foundation
 
-public class Observable<T> {
+public struct Observable<T> {
     
     public enum EventType {
         case valueChanged
@@ -54,15 +54,15 @@ public class Observable<T> {
         }
     }
     
-    public func onEvent(_ event: EventType, closure: @escaping eventClosure) {
+    public mutating func onEvent(_ event: EventType, closure: @escaping eventClosure) {
         eventStorage[event] = closure
     }
     
-    public func removeObservers() {
+    public mutating func removeObservers() {
         eventStorage = [EventType: eventClosure]()
     }
     
-    public func removeObserver(_ event: EventType) {
+    public mutating func removeObserver(_ event: EventType) {
         eventStorage[event] = nil
     }
 }
