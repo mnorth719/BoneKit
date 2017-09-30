@@ -20,11 +20,11 @@
 		1D1EE7F0D41C2586CEA3B8C596D59E30 /* URLDataPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C2DDC09A2F5FF7FC82E8881A3996B /* URLDataPromise.swift */; };
 		1F8943E658BE03C7DD1496563F5AA216 /* NSURLSession+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B468F428AC55896FEC0D8C3A1181AC /* NSURLSession+AnyPromise.m */; };
 		219E3E28381D0CAF1A53BD7A6FC1A6C1 /* NSTask+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = A781E6C7BA06DD8A0A80B0494DA26A4E /* NSTask+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22E003EC1F8053A300E7F87D /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E003E41F80531A00E7F87D /* Atomic.swift */; };
-		22E003ED1F8053A300E7F87D /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E003E61F80531A00E7F87D /* Observable.swift */; };
-		22E003EE1F8053A300E7F87D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E003E71F80531A00E7F87D /* StringExtensions.swift */; };
-		22E003EF1F8053A300E7F87D /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E003E51F80531A00E7F87D /* WebClient.swift */; };
-		22E003F01F8053A600E7F87D /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E003EB1F80536C00E7F87D /* BorderedButton.swift */; };
+		22E003F51F8054EC00E7F87D /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E003F11F8054EB00E7F87D /* Atomic.swift */; };
+		22E003F61F8054EC00E7F87D /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E003F21F8054EC00E7F87D /* WebClient.swift */; };
+		22E003F71F8054EC00E7F87D /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E003F31F8054EC00E7F87D /* Observable.swift */; };
+		22E003F81F8054EC00E7F87D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E003F41F8054EC00E7F87D /* StringExtensions.swift */; };
+		22E003FB1F80551200E7F87D /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E003FA1F80550900E7F87D /* BorderedButton.swift */; };
 		2DB096A2AB139FB88D27EAC36F2E74A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD841937CDE1B47BE56B0B77A73AD71 /* Foundation.framework */; };
 		316647462372025BD108AEFC00C23781 /* BoneKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 965555CD820D4BCD519D9B7B1B5C0C18 /* BoneKit-dummy.m */; };
 		3639117A0B69B8C2E20F1C4B75047928 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B97DBEF2B7618554E6D9AB143DFAA /* Promise.swift */; };
@@ -113,11 +113,11 @@
 		1C5295FAD03A7958463233E1C1A1A444 /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DBBCF038A033FBF591B05C0FA593946 /* GlobalState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GlobalState.m; path = Sources/GlobalState.m; sourceTree = "<group>"; };
 		1E33654BE09E7109A0FEEE76E49BF8E0 /* NSTask+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTask+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSTask+AnyPromise.m"; sourceTree = "<group>"; };
-		22E003E41F80531A00E7F87D /* Atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
-		22E003E51F80531A00E7F87D /* WebClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebClient.swift; sourceTree = "<group>"; };
-		22E003E61F80531A00E7F87D /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
-		22E003E71F80531A00E7F87D /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		22E003EB1F80536C00E7F87D /* BorderedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BorderedButton.swift; path = "../Custom Controls/BorderedButton.swift"; sourceTree = "<group>"; };
+		22E003F11F8054EB00E7F87D /* Atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Atomic.swift; path = ../Utils/Atomic.swift; sourceTree = "<group>"; };
+		22E003F21F8054EC00E7F87D /* WebClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebClient.swift; path = ../Utils/WebClient.swift; sourceTree = "<group>"; };
+		22E003F31F8054EC00E7F87D /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Observable.swift; path = ../Utils/Observable.swift; sourceTree = "<group>"; };
+		22E003F41F8054EC00E7F87D /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = ../Utils/StringExtensions.swift; sourceTree = "<group>"; };
+		22E003FA1F80550900E7F87D /* BorderedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
 		294026AB8B28C610FC57DF2A26EB7FC9 /* NSNotificationCenter+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSNotificationCenter+Promise.swift"; path = "Extensions/Foundation/Sources/NSNotificationCenter+Promise.swift"; sourceTree = "<group>"; };
 		2C6823BF3BB1566E1F8C86FABE5F23DA /* wrap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = wrap.swift; path = Sources/wrap.swift; sourceTree = "<group>"; };
 		32BCEBD61870AA666DA088DF46A4BE73 /* Pods-BoneKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BoneKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -240,19 +240,19 @@
 		22E003E81F80531E00E7F87D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				22E003E41F80531A00E7F87D /* Atomic.swift */,
-				22E003E61F80531A00E7F87D /* Observable.swift */,
-				22E003E71F80531A00E7F87D /* StringExtensions.swift */,
-				22E003E51F80531A00E7F87D /* WebClient.swift */,
+				22E003F11F8054EB00E7F87D /* Atomic.swift */,
+				22E003F31F8054EC00E7F87D /* Observable.swift */,
+				22E003F41F8054EC00E7F87D /* StringExtensions.swift */,
+				22E003F21F8054EC00E7F87D /* WebClient.swift */,
 			);
 			name = Utils;
 			path = Utlis;
 			sourceTree = "<group>";
 		};
-		22E003EA1F80535200E7F87D /* Custom Controls */ = {
+		22E003FC1F80551500E7F87D /* Custom Controls */ = {
 			isa = PBXGroup;
 			children = (
-				22E003EB1F80536C00E7F87D /* BorderedButton.swift */,
+				22E003FA1F80550900E7F87D /* BorderedButton.swift */,
 			);
 			name = "Custom Controls";
 			path = "New Group";
@@ -314,7 +314,7 @@
 		513FE55FA247C6EA6BAA1F48C685E4BF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				22E003EA1F80535200E7F87D /* Custom Controls */,
+				22E003FC1F80551500E7F87D /* Custom Controls */,
 				22E003E81F80531E00E7F87D /* Utils */,
 			);
 			path = Classes;
@@ -663,12 +663,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22E003EE1F8053A300E7F87D /* StringExtensions.swift in Sources */,
-				22E003EC1F8053A300E7F87D /* Atomic.swift in Sources */,
-				22E003F01F8053A600E7F87D /* BorderedButton.swift in Sources */,
-				22E003ED1F8053A300E7F87D /* Observable.swift in Sources */,
-				22E003EF1F8053A300E7F87D /* WebClient.swift in Sources */,
+				22E003F81F8054EC00E7F87D /* StringExtensions.swift in Sources */,
+				22E003F71F8054EC00E7F87D /* Observable.swift in Sources */,
+				22E003FB1F80551200E7F87D /* BorderedButton.swift in Sources */,
+				22E003F51F8054EC00E7F87D /* Atomic.swift in Sources */,
 				316647462372025BD108AEFC00C23781 /* BoneKit-dummy.m in Sources */,
+				22E003F61F8054EC00E7F87D /* WebClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
