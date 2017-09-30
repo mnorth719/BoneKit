@@ -12,6 +12,7 @@
 		1773A1250EFE29CF959D018733B6F11A /* when.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D29D2F64D48281095C8274FEE6DACD0 /* when.swift */; };
 		1E04659F8D78CD137A869C55CE9B1C3A /* AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCDD0F4DEC7B45ED67BDA259AA0495C /* AnyPromise.m */; };
 		20111DEBC6C19943081952F4BB708CD7 /* AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 01FE4B605FCF6F5D282413F2C6FEDFD4 /* AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22CD18AB1F7F75DF001F46DB /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD18AA1F7F75DF001F46DB /* WebClient.swift */; };
 		241DC888CA607E9EE3F3AA95FBFB466F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F82E67A30841B8EA38FFE9317D477D /* UIKit.framework */; };
 		27AE81F25C4BBDE46AF50791C8166013 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8F25817235857AE113B60CE73F1492 /* PromiseKit.framework */; };
 		29ABB0AC3970299B4B267AA278462F4D /* after.swift in Sources */ = {isa = PBXBuildFile; fileRef = B660E1F4E80FD3F4BF33455CD40AA754 /* after.swift */; };
@@ -101,18 +102,19 @@
 
 /* Begin PBXFileReference section */
 		01FE4B605FCF6F5D282413F2C6FEDFD4 /* AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AnyPromise.h; path = Sources/AnyPromise.h; sourceTree = "<group>"; };
-		04FE493E63079BE6F05E64954293E716 /* Pods_MattKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MattKit_Example.framework; path = "Pods-MattKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04FE493E63079BE6F05E64954293E716 /* Pods_MattKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MattKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D38D8F361C611EFCFF57DC13B115F3A /* when.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = when.m; path = Sources/when.m; sourceTree = "<group>"; };
 		0D8F25817235857AE113B60CE73F1492 /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FDA7E3EBBB83E241666AE879D5AE2F5 /* MattKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MattKit.framework; path = MattKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FDA7E3EBBB83E241666AE879D5AE2F5 /* MattKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MattKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		111CB544691468816DDF3F8D46424552 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		1486F0D7DBC45F6C7B332283C9DD27EC /* Pods-MattKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MattKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		197D3E93264F1FDDD1E75858F0551B21 /* MattKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MattKit-umbrella.h"; sourceTree = "<group>"; };
 		1B2B66BAB51D08D378DE7E56BED77CA1 /* MattKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MattKit-dummy.m"; sourceTree = "<group>"; };
 		1DBBCF038A033FBF591B05C0FA593946 /* GlobalState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GlobalState.m; path = Sources/GlobalState.m; sourceTree = "<group>"; };
 		1E33654BE09E7109A0FEEE76E49BF8E0 /* NSTask+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTask+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSTask+AnyPromise.m"; sourceTree = "<group>"; };
+		22CD18AA1F7F75DF001F46DB /* WebClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebClient.swift; path = ../Networking/WebClient.swift; sourceTree = "<group>"; };
 		294026AB8B28C610FC57DF2A26EB7FC9 /* NSNotificationCenter+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSNotificationCenter+Promise.swift"; path = "Extensions/Foundation/Sources/NSNotificationCenter+Promise.swift"; sourceTree = "<group>"; };
-		2C2909988A3E76370EDD989D3372226E /* Pods-MattKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MattKit_Tests.modulemap"; sourceTree = "<group>"; };
+		2C2909988A3E76370EDD989D3372226E /* Pods-MattKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MattKit_Tests.modulemap"; sourceTree = "<group>"; };
 		2C6823BF3BB1566E1F8C86FABE5F23DA /* wrap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = wrap.swift; path = Sources/wrap.swift; sourceTree = "<group>"; };
 		337F0663F2253CE5F69CA018CA7C90D8 /* NSURLSession+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLSession+Promise.swift"; path = "Extensions/Foundation/Sources/NSURLSession+Promise.swift"; sourceTree = "<group>"; };
 		37D86DBB6A7B7F77D79F889CEBC3755E /* CALayer+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CALayer+AnyPromise.h"; path = "Extensions/QuartzCore/Sources/CALayer+AnyPromise.h"; sourceTree = "<group>"; };
@@ -144,7 +146,7 @@
 		8412879485B13AAD634CADC43744034B /* Pods-MattKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MattKit_Example-frameworks.sh"; sourceTree = "<group>"; };
 		841B7A23813FA39EA855E4F2C54A7807 /* MattKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MattKit-prefix.pch"; sourceTree = "<group>"; };
 		86B3DEEC79A67BBF9E1B1065ECCBAC9C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95632F4C8D15D6CF8EE867952FA69262 /* PMKUIKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PMKUIKit.h; path = Extensions/UIKit/Sources/PMKUIKit.h; sourceTree = "<group>"; };
 		95739ECC732A6332E68750FE3F7489A4 /* Promise+AnyPromise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+AnyPromise.swift"; path = "Sources/Promise+AnyPromise.swift"; sourceTree = "<group>"; };
 		95D973DA9ADC73AA7D352C8AEE695EC2 /* Pods-MattKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MattKit_Example-resources.sh"; sourceTree = "<group>"; };
@@ -154,12 +156,12 @@
 		9D009A35EE64D77102391EC364147766 /* PMKFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PMKFoundation.h; path = Extensions/Foundation/Sources/PMKFoundation.h; sourceTree = "<group>"; };
 		A781E6C7BA06DD8A0A80B0494DA26A4E /* NSTask+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSTask+AnyPromise.h"; path = "Extensions/Foundation/Sources/NSTask+AnyPromise.h"; sourceTree = "<group>"; };
 		A9F82E67A30841B8EA38FFE9317D477D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		AC9A033C9FB0BF8C7E56EA877107434B /* Pods_MattKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MattKit_Tests.framework; path = "Pods-MattKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC9A033C9FB0BF8C7E56EA877107434B /* Pods_MattKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MattKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07CA260D23F5385A8729FB7BDC1D0CB /* Pods-MattKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MattKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		B660E1F4E80FD3F4BF33455CD40AA754 /* after.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = after.swift; path = Sources/after.swift; sourceTree = "<group>"; };
 		B688E5CB9A613E411E142162806355B8 /* Pods-MattKit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MattKit_Tests-resources.sh"; sourceTree = "<group>"; };
 		BD8EEC210981A388DDF8ECCEF8433904 /* NSObject+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Promise.swift"; path = "Extensions/Foundation/Sources/NSObject+Promise.swift"; sourceTree = "<group>"; };
-		BDB0E3BC74CAD6B6B797C8666BCF5F8C /* MattKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MattKit.modulemap; sourceTree = "<group>"; };
+		BDB0E3BC74CAD6B6B797C8666BCF5F8C /* MattKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MattKit.modulemap; sourceTree = "<group>"; };
 		BFFA858C2DB288BB308A48DC5193E6F1 /* PMKAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PMKAlertController.swift; path = Extensions/UIKit/Sources/PMKAlertController.swift; sourceTree = "<group>"; };
 		C2A6ECE243A768CEF920C635611E6F24 /* Pods-MattKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MattKit_Example-dummy.m"; sourceTree = "<group>"; };
 		C54315DA3A1A39E54691EB5C6921A90C /* after.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = after.m; path = Sources/after.m; sourceTree = "<group>"; };
@@ -172,17 +174,17 @@
 		D2D3EE77CB3A00E14726A601A1ABD7AC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4B477544DA7C48F9048EFADF9C1EC16 /* Pods-MattKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MattKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D9B468F428AC55896FEC0D8C3A1181AC /* NSURLSession+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSURLSession+AnyPromise.m"; sourceTree = "<group>"; };
-		DB6F691A801D32620ED501B0C3559FA9 /* PromiseKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PromiseKit.modulemap; sourceTree = "<group>"; };
+		DB6F691A801D32620ED501B0C3559FA9 /* PromiseKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PromiseKit.modulemap; sourceTree = "<group>"; };
 		DBC136A9626A25E47C446F33279AD03E /* Pods-MattKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MattKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DDD911A7C16FAA09302EE0DF2F0B0DA9 /* PromiseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PromiseKit-dummy.m"; sourceTree = "<group>"; };
 		DE1F16648A7B55D15BED16EC48C06644 /* PromiseKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PromiseKit.h; path = Sources/PromiseKit.h; sourceTree = "<group>"; };
 		DF52D452D72EF81C1A4A1B4DBDFC452A /* afterlife.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = afterlife.swift; path = Extensions/Foundation/Sources/afterlife.swift; sourceTree = "<group>"; };
 		E502912211CCDD36FD4004E7A0C712CC /* Observable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
-		E6C76E294DDB581458E6E7B461FBEBDF /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PromiseKit.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6C76E294DDB581458E6E7B461FBEBDF /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7480BAB29A5573D40EBF6E02381C1E2 /* UIViewController+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+AnyPromise.m"; path = "Extensions/UIKit/Sources/UIViewController+AnyPromise.m"; sourceTree = "<group>"; };
 		E88B7ED31262B80E7880733C93A868DC /* Pods-MattKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MattKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		E9A5586A6499C102D0BCC9DC96EF7F49 /* join.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = join.swift; path = Sources/join.swift; sourceTree = "<group>"; };
-		EB987E145A1ECF2F4F5F8E85D622EAE5 /* Pods-MattKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MattKit_Example.modulemap"; sourceTree = "<group>"; };
+		EB987E145A1ECF2F4F5F8E85D622EAE5 /* Pods-MattKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MattKit_Example.modulemap"; sourceTree = "<group>"; };
 		EE9A7EF9C115E41D052ADAEF5E87EFD1 /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = State.swift; path = Sources/State.swift; sourceTree = "<group>"; };
 		F3AF2875741DFD0921E7E1FF67859289 /* dispatch_promise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = dispatch_promise.m; path = Sources/dispatch_promise.m; sourceTree = "<group>"; };
 		F6300B2B83011D43128DA44649586D4A /* fwd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fwd.h; path = Sources/fwd.h; sourceTree = "<group>"; };
@@ -244,6 +246,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		22CD18A81F7F74CF001F46DB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7CFB8FDF883C2A1D9880177A24B2336F /* Atomic.swift */,
+				E502912211CCDD36FD4004E7A0C712CC /* Observable.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		22CD18A91F7F74E5001F46DB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				22CD18AA1F7F75DF001F46DB /* WebClient.swift */,
+			);
+			name = Networking;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		38908CA03A120B329909CCDB1910CD05 /* PromiseKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,7 +273,6 @@
 				BC3601AD5BED07DF695ECC52C0E11BB1 /* Support Files */,
 				F9C1C38E536FD710388B234B7D8FA163 /* UIKit */,
 			);
-			name = PromiseKit;
 			path = PromiseKit;
 			sourceTree = "<group>";
 		};
@@ -276,7 +295,6 @@
 			children = (
 				C9D373DAE0E411027DD24383BB4E4B79 /* BorderedButton.swift */,
 			);
-			name = "Custom Controls";
 			path = "Custom Controls";
 			sourceTree = "<group>";
 		};
@@ -336,7 +354,6 @@
 			children = (
 				F02A503FEC564E1529CAC931FA614EC6 /* Classes */,
 			);
-			name = MattKit;
 			path = MattKit;
 			sourceTree = "<group>";
 		};
@@ -468,11 +485,10 @@
 		F02A503FEC564E1529CAC931FA614EC6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7CFB8FDF883C2A1D9880177A24B2336F /* Atomic.swift */,
-				E502912211CCDD36FD4004E7A0C712CC /* Observable.swift */,
+				22CD18A91F7F74E5001F46DB /* Networking */,
+				22CD18A81F7F74CF001F46DB /* Utils */,
 				6761DA263D2DDA406BCC18260271F204 /* Custom Controls */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -665,6 +681,7 @@
 				F36485F7660B71CEC57290AC43466F6D /* Atomic.swift in Sources */,
 				57EC14B649D0541F71E8101D7E447DD9 /* BorderedButton.swift in Sources */,
 				C9DC956B4F425214507F204D645273EA /* MattKit-dummy.m in Sources */,
+				22CD18AB1F7F75DF001F46DB /* WebClient.swift in Sources */,
 				6E826EA8088ABB99ABE75381D74692EA /* Observable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
