@@ -1,0 +1,6 @@
+framework module Pods_BoneKit_Example {
+  umbrella header "Pods-BoneKit_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

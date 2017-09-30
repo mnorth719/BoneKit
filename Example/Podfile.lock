@@ -1,5 +1,5 @@
 PODS:
-  - MattKit (0.1.0):
+  - BoneKit (0.1.0):
     - PromiseKit (~> 4.4)
   - PromiseKit (4.4.0):
     - PromiseKit/Foundation (= 4.4.0)
@@ -14,16 +14,16 @@ PODS:
     - PromiseKit/CorePromise
 
 DEPENDENCIES:
-  - MattKit (from `../`)
+  - BoneKit (from `../`)
 
 EXTERNAL SOURCES:
-  MattKit:
+  BoneKit:
     :path: ../
 
 SPEC CHECKSUMS:
-  MattKit: 2b49436aa30b1378c9f2321fd9c7d2d791cdf7a2
+  BoneKit: 2491b8d3e2d484337b6af95d30c0a4745d2bd979
   PromiseKit: ecf5fe92275d57ee77c9ede858af47a162e9b97e
 
-PODFILE CHECKSUM: 17548d231d4098389b4e966255438bbc6dc886b4
+PODFILE CHECKSUM: 7acd8f487e58e5a3e89548efaf46e37ccdc75f9b
 
 COCOAPODS: 1.2.1

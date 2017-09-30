@@ -1,0 +1,6 @@
+framework module BoneKit {
+  umbrella header "BoneKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

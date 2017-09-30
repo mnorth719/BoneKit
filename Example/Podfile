@@ -1,9 +1,9 @@
 use_frameworks!
 
-target 'MattKit_Example' do
-  pod 'MattKit', :path => '../'
+target 'BoneKit_Example' do
+  pod 'BoneKit', :path => '../'
 
-  target 'MattKit_Tests' do
+  target 'BoneKit_Tests' do
     inherit! :search_paths
 
     
