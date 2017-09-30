@@ -1,5 +1,17 @@
 PODS:
-  - MattKit (0.1.0)
+  - MattKit (0.1.0):
+    - PromiseKit (~> 4.4)
+  - PromiseKit (4.4.0):
+    - PromiseKit/Foundation (= 4.4.0)
+    - PromiseKit/QuartzCore (= 4.4.0)
+    - PromiseKit/UIKit (= 4.4.0)
+  - PromiseKit/CorePromise (4.4.0)
+  - PromiseKit/Foundation (4.4.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.4.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.4.0):
+    - PromiseKit/CorePromise
 
 DEPENDENCIES:
   - MattKit (from `../`)
@@ -9,7 +21,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  MattKit: 58d73a7387d202ad012dc718d13b09582eb384a0
+  MattKit: 2b49436aa30b1378c9f2321fd9c7d2d791cdf7a2
+  PromiseKit: ecf5fe92275d57ee77c9ede858af47a162e9b97e
 
 PODFILE CHECKSUM: 17548d231d4098389b4e966255438bbc6dc886b4
 

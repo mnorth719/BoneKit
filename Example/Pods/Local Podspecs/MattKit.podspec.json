@@ -1,9 +1,9 @@
 {
   "name": "MattKit",
   "version": "0.1.0",
-  "summary": "A short description of MattKit.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Matt North/MattKit",
+  "summary": "The essential kit for building iOS apps!",
+  "description": "The essential tool kit for quickly building iOS applications.\nMain tools:\n- Atomic Swift Wrapper\n- HTTP Client\n- Style kit\n- Custom Controls",
+  "homepage": "https://github.com/mnorth719/MattKit",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,17 @@
     "Matt North": "matt.north93@gmail.com"
   },
   "source": {
-    "git": "https://github.com/Matt North/MattKit.git",
+    "git": "https://github.com/mnorth719/MattKit.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "MattKit/Classes/**/*"
+  "source_files": "MattKit/Classes/**/*",
+  "frameworks": "UIKit",
+  "dependencies": {
+    "PromiseKit": [
+      "~> 4.4"
+    ]
+  }
 }
