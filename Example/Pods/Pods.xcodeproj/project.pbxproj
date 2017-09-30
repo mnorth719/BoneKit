@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22CD18A11F7F54CB001F46DB /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD18A01F7F54CB001F46DB /* Atomic.swift */; };
+		22CD18A31F7F5F83001F46DB /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD18A21F7F5F83001F46DB /* Observable.swift */; };
 		25F1EF8DE00102FB217622BAF64EEBC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		5ECDCC92683B09943F43890E457B6E8B /* Pods-MattKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F84C84E54C3D9BEDE2B755F3107E905C /* Pods-MattKit_Tests-dummy.m */; };
 		64E6EA26CC2E2D0CE8CCEC64756145DF /* MattKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 197D3E93264F1FDDD1E75858F0551B21 /* MattKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,6 +35,7 @@
 		197D3E93264F1FDDD1E75858F0551B21 /* MattKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MattKit-umbrella.h"; sourceTree = "<group>"; };
 		1B2B66BAB51D08D378DE7E56BED77CA1 /* MattKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MattKit-dummy.m"; sourceTree = "<group>"; };
 		22CD18A01F7F54CB001F46DB /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
+		22CD18A21F7F5F83001F46DB /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		28E298C6D7169AE7AD361A16C8B19AA0 /* Pods_MattKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MattKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C2909988A3E76370EDD989D3372226E /* Pods-MattKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MattKit_Tests.modulemap"; sourceTree = "<group>"; };
 		4384820F73E959056F03C6DBB7B9ECF0 /* Pods-MattKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MattKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				22CD18A01F7F54CB001F46DB /* Atomic.swift */,
+				22CD18A21F7F5F83001F46DB /* Observable.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22CD18A11F7F54CB001F46DB /* Atomic.swift in Sources */,
+				22CD18A31F7F5F83001F46DB /* Observable.swift in Sources */,
 				D5D286F5F3798BF7254C6DDA97D638CC /* MattKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
