@@ -108,20 +108,6 @@ public class Atomic<T> {
  
  Ex:
  
- 10 >> someAtomicInt
- print(someAtomicInt.value)
- // Output: 10
- 
- */
-public func >><T>(left: T, right: Atomic<T>) {
-    right.value = left
-}
-
-/**
- Convenience operator for directly setting an atomic properties value.
- 
- Ex:
- 
  someAtomicInt << 10
  print(someAtomicInt.value)
  // Output: 10

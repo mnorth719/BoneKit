@@ -28,10 +28,9 @@
  
  
  */
-
 import Foundation
 
-public struct Observable<T> {
+public class Observable<T> {
     
     public enum EventType {
         case valueChanged
@@ -54,15 +53,30 @@ public struct Observable<T> {
         }
     }
     
-    public mutating func onEvent(_ event: EventType, closure: @escaping eventClosure) {
+    public func onEvent(_ event: EventType, closure: @escaping eventClosure) {
         eventStorage[event] = closure
     }
     
-    public mutating func removeObservers() {
+    public func removeObservers() {
         eventStorage = [EventType: eventClosure]()
     }
     
-    public mutating func removeObserver(_ event: EventType) {
+    public func removeObserver(_ event: EventType) {
         eventStorage[event] = nil
     }
 }
+
+/**
+ Convenience operator for directly setting an observable value.
+ 
+ Ex:
+ 
+ someObservableInt << 10
+ print(someObservableInt.value)
+ // Output: 10
+ 
+ */
+public func <<<T>(left: Observable<T>, right: T) {
+    left.value = right
+}
+
