@@ -1,6 +1,6 @@
 # BoneKit
 
-[![CI Status](http://img.shields.io/travis/Matt North/BoneKit.svg?style=flat)](https://travis-ci.org/Matt North/BoneKit)
+[![CI Status](https://www.bitrise.io/app/ce77032df58024d6/status.svg?token=acy_LrpenZc5DaDxLe2yKA&branch=develop)](https://www.bitrise.io/)
 [![Version](https://img.shields.io/cocoapods/v/BoneKit.svg?style=flat)](http://cocoapods.org/pods/BoneKit)
 [![License](https://img.shields.io/cocoapods/l/BoneKit.svg?style=flat)](http://cocoapods.org/pods/BoneKit)
 [![Platform](https://img.shields.io/cocoapods/p/BoneKit.svg?style=flat)](http://cocoapods.org/pods/BoneKit)
