@@ -1,11 +1,10 @@
 use_frameworks!
+platform :ios, '9.0'
+inhibit_all_warnings!
 
 target 'BoneKit_Example' do
-  pod 'BoneKit', :path => '../'
-
   target 'BoneKit_Tests' do
     inherit! :search_paths
-
-    
+    pod 'BoneKit', :path => '../'
   end
 end

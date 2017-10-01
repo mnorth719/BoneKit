@@ -12,11 +12,16 @@ public protocol WebClientJSONParser {
     func decode<T>(_ type: T.Type, from data: Data) throws -> T where T : Decodable
 }
 
+public protocol URLSessionProtocol {
+    func dataTask(with request: URLRequest) -> URLDataPromise
+}
+
+extension URLSession: URLSessionProtocol {}
 extension JSONDecoder: WebClientJSONParser {}
 
 public class WebClient {
     
-    public init(urlSession: URLSession = URLSession.shared, parser: WebClientJSONParser = JSONDecoder()) {
+    public init(urlSession: URLSessionProtocol = URLSession.shared, parser: WebClientJSONParser = JSONDecoder()) {
         self.parser = parser
         self.urlSession = urlSession
     }
@@ -25,8 +30,8 @@ public class WebClient {
         case GET
         case POST(params: [String: Any])
         case PUT(params: [String: Any])
-        case DELETE
-        case PATCH
+        case DELETE(params: [String: Any])
+        case PATCH(params: [String: Any])
         
         var rawValue: String {
             switch self {
@@ -44,7 +49,7 @@ public class WebClient {
         }
     }
     
-    private var urlSession: URLSession
+    private var urlSession: URLSessionProtocol
     private var parser: WebClientJSONParser
     private var parsingQueue = DispatchQueue(label: "com.mattkit.web_parse_queue",
                                              qos: .userInitiated,
@@ -81,14 +86,14 @@ fileprivate struct RequestFactory {
             requestBody = body
         case .PUT(let body):
             requestBody = body
-        case .DELETE:
-            break
-        case .PATCH:
-            break
+        case .DELETE(let body):
+            requestBody = body
+        case .PATCH(let body):
+            requestBody = body
         }
         
         if let requestBody = requestBody {
-            urlRequest.httpBody = try JSONSerialization.data(withJSONObject: requestBody, options: [])
+            urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: requestBody, options: [])
         }
         
         if let headers = headers {
