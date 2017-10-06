@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22CF3B9A1F873AFC00EEBD0A /* ObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CF3B991F873AFC00EEBD0A /* ObservableTests.swift */; };
 		22E004041F80BD0000E7F87D /* Pods_BoneKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E004051F80BD0000E7F87D /* Pods_BoneKit_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		19329FB113DA28EE06A9C85E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		22CF3B991F873AFC00EEBD0A /* ObservableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTests.swift; sourceTree = "<group>"; };
 		22E004031F80BCF400E7F87D /* BoneKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BoneKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E004051F80BD0000E7F87D /* Pods_BoneKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_BoneKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C1CBBB9F3C9129AAE1A7074 /* Pods-BoneKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoneKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoneKit_Example/Pods-BoneKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				22CF3B991F873AFC00EEBD0A /* ObservableTests.swift */,
 				607FACEB1AFB9204008FA782 /* WebClientTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -390,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22CF3B9A1F873AFC00EEBD0A /* ObservableTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* WebClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
