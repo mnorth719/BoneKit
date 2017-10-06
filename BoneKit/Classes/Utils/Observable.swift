@@ -33,20 +33,20 @@ import Foundation
 public class Observable<T> {
     
     public enum EventType {
-        case valueChanged
+        case valueDidChange
         case valueWillChange
     }
     
     public typealias eventClosure = (T) -> Void
     private var eventStorage = [EventType: eventClosure]()
     
-    init(_ value: T) {
+    public init(_ value: T) {
         self.value = value
     }
     
-    var value: T {
+    public var value: T {
         didSet {
-            eventStorage[.valueChanged]?(value)
+            eventStorage[.valueDidChange]?(value)
         }
         willSet(newValue) {
             eventStorage[.valueWillChange]?(newValue)

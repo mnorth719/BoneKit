@@ -1,6 +1,6 @@
 import UIKit
 import XCTest
-import BoneKit
+@testable import BoneKit
 import PromiseKit
 
 class WebClientTests: XCTestCase {
