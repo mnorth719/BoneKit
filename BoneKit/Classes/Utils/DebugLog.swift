@@ -19,7 +19,7 @@ public enum DebugLevel: UInt {
     case excessive
 }
 
-extension DebugLevel : Comparable {
+extension DebugLevel: Comparable {
     public static func <(lhs: DebugLevel, rhs: DebugLevel) -> Bool {
         return lhs.rawValue < rhs.rawValue
     }

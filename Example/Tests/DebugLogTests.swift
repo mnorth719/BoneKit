@@ -45,7 +45,7 @@ class DebugLogTests: XCTestCase {
 }
 
 extension DebugLogTests {
-    fileprivate struct DebugLogTester : LogLevelPrintable {
+    fileprivate struct DebugLogTester: LogLevelPrintable {
         var debugLogLevel: DebugLevel
         init(_ logLevel: DebugLevel) {
             self.debugLogLevel = logLevel
@@ -68,8 +68,6 @@ extension DebugLogTests {
             
             let didPrintExcessive = printLog("", atOrAbove: .excessive)
             XCTAssertEqual(shouldPrintExcessive, didPrintExcessive)
-            
-            
         }
     }
 }
