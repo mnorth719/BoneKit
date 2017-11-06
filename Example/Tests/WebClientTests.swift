@@ -25,7 +25,7 @@ class WebClientTests: XCTestCase {
         ]
         
         let promiseExpectation = expectation(description: "promise should resolve with mock object")
-        subject.request(url!, headers: headers, method: WebClient.RESTMethod.GET).then { (response: MockCodableObject) -> Void in
+        subject.request(url!, headers: headers, method: WebClient.HTTPMethod.GET).then { (response: MockCodableObject) -> Void in
             XCTAssertEqual(mockObject.title, response.title)
             XCTAssertEqual(mockObject.message, response.message)
             promiseExpectation.fulfill()
@@ -52,9 +52,9 @@ class WebClientTests: XCTestCase {
             "bodyParam": 1
         ]
         
-        let restMethod = WebClient.RESTMethod.PUT(params: body)
+        let httpMethod = WebClient.HTTPMethod.PUT(params: body)
         let promiseExpectation = expectation(description: "promise should resolve with mock object")
-        subject.request(url!, headers: headers, method: restMethod).then { (response: MockCodableObject) -> Void in
+        subject.request(url!, headers: headers, method: httpMethod).then { (response: MockCodableObject) -> Void in
             XCTAssertEqual(mockObject.title, response.title)
             XCTAssertEqual(mockObject.message, response.message)
             promiseExpectation.fulfill()
@@ -81,9 +81,9 @@ class WebClientTests: XCTestCase {
             "bodyParam": 1
         ]
         
-        let restMethod = WebClient.RESTMethod.PATCH(params: body)
+        let httpMethod = WebClient.HTTPMethod.PATCH(params: body)
         let promiseExpectation = expectation(description: "promise should resolve with mock object")
-        subject.request(url!, headers: headers, method: restMethod).then { (response: MockCodableObject) -> Void in
+        subject.request(url!, headers: headers, method: httpMethod).then { (response: MockCodableObject) -> Void in
             XCTAssertEqual(mockObject.title, response.title)
             XCTAssertEqual(mockObject.message, response.message)
             promiseExpectation.fulfill()
@@ -110,9 +110,9 @@ class WebClientTests: XCTestCase {
             "bodyParam": 1
         ]
         
-        let restMethod = WebClient.RESTMethod.POST(params: body)
+        let httpMethod = WebClient.HTTPMethod.POST(params: body)
         let promiseExpectation = expectation(description: "promise should resolve with mock object")
-        subject.request(url!, headers: headers, method: restMethod).then { (response: MockCodableObject) -> Void in
+        subject.request(url!, headers: headers, method: httpMethod).then { (response: MockCodableObject) -> Void in
             XCTAssertEqual(mockObject.title, response.title)
             XCTAssertEqual(mockObject.message, response.message)
             promiseExpectation.fulfill()
@@ -139,9 +139,9 @@ class WebClientTests: XCTestCase {
             "bodyParam": 1
         ]
         
-        let restMethod = WebClient.RESTMethod.DELETE(params: body)
+        let httpMethod = WebClient.HTTPMethod.DELETE(params: body)
         let promiseExpectation = expectation(description: "promise should resolve with mock object")
-        subject.request(url!, headers: headers, method: restMethod).then { (response: MockCodableObject) -> Void in
+        subject.request(url!, headers: headers, method: httpMethod).then { (response: MockCodableObject) -> Void in
             XCTAssertEqual(mockObject.title, response.title)
             XCTAssertEqual(mockObject.message, response.message)
             promiseExpectation.fulfill()
@@ -170,9 +170,9 @@ class WebClientTests: XCTestCase {
             "bodyParam": 1
         ]
         
-        let restMethod = WebClient.RESTMethod.POST(params: body)
+        let httpMethod = WebClient.HTTPMethod.POST(params: body)
         let promiseExpectation = expectation(description: "promise should reject with error")
-        subject.request(url!, headers: headers, method: restMethod).then { (response: MockCodableObject) -> Void in
+        subject.request(url!, headers: headers, method: httpMethod).then { (response: MockCodableObject) -> Void in
             // ignore
         }.catch { error in
             let error = error as NSError
@@ -203,9 +203,9 @@ class WebClientTests: XCTestCase {
             "bodyParam": 1
         ]
         
-        let restMethod = WebClient.RESTMethod.POST(params: body)
+        let httpMethod = WebClient.HTTPMethod.POST(params: body)
         let promiseExpectation = expectation(description: "promise should reject with error")
-        subject.request(url!, headers: headers, method: restMethod).then { (response: MockCodableObject) -> Void in
+        subject.request(url!, headers: headers, method: httpMethod).then { (response: MockCodableObject) -> Void in
             // ignore
         }.catch { error in
                 let error = error as NSError

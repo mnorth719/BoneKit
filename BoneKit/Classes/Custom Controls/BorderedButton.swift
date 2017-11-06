@@ -1,6 +1,6 @@
 //
 //  BorderedButton.swift
-//  MattKit
+//  BoneKit
 //
 //  Created by Matt  North on 9/29/17.
 //

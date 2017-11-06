@@ -26,7 +26,7 @@ public class WebClient {
         self.urlSession = urlSession
     }
     
-    public enum RESTMethod {
+    public enum HTTPMethod {
         case GET
         case POST(params: [String: Any])
         case PUT(params: [String: Any])
@@ -55,7 +55,7 @@ public class WebClient {
                                              qos: .userInitiated,
                                              attributes: DispatchQueue.Attributes.concurrent)
     
-    public func request<T: Codable>(_ url: URL, headers: [String : String]?, method: RESTMethod) -> Promise<T> {
+    public func request<T: Codable>(_ url: URL, headers: [String : String]?, method: HTTPMethod) -> Promise<T> {
         return Promise { resolve, reject in
             do {
                 let urlRequest = try RequestFactory.request(for: url, headers: headers, method: method)
@@ -74,7 +74,7 @@ public class WebClient {
 }
 
 fileprivate struct RequestFactory {
-    static func request(for url: URL, headers: [String : String]?, method: WebClient.RESTMethod) throws -> URLRequest {
+    static func request(for url: URL, headers: [String : String]?, method: WebClient.HTTPMethod) throws -> URLRequest {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
         var requestBody: [String : Any]?
