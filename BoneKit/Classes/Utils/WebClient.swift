@@ -55,7 +55,7 @@ public class WebClient {
                                              qos: .userInitiated,
                                              attributes: DispatchQueue.Attributes.concurrent)
     
-    public func request<T: Codable>(_ url: URL, headers: [String : String]?, method: HTTPMethod) -> Promise<T> {
+    public func request<T: Decodable>(_ url: URL, headers: [String : String]?, method: HTTPMethod) -> Promise<T> {
         return Promise { resolve, reject in
             do {
                 let urlRequest = try RequestFactory.request(for: url, headers: headers, method: method)
