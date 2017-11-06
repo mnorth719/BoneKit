@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'BoneKit'
-s.version          = '0.1.0'
+s.version          = '0.2.0'
 s.summary          = 'The bare bones kit for building iOS apps!'
 
 # This description is used to generate tags and improve search results.
@@ -24,6 +24,7 @@ Main tools:
 - HTTP Client
 - Style kit
 - Custom Controls
+- Debug Logger
 DESC
 
 s.homepage         = 'https://github.com/mnorth719/BoneKit'
