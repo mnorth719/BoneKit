@@ -2,7 +2,7 @@
 //  StringExtensions.swift
 //  BoneKit
 //
-//  Created by Matt  North on 9/30/17.
+//  Created by Matt North on 9/30/17.
 //
 
 import Foundation

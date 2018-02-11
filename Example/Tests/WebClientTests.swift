@@ -48,13 +48,9 @@ class WebClientTests: XCTestCase {
         let headers: [String : String] = [
             "headerKey": "headerValue"
         ]
-        let body: [String : Any] = [
-            "bodyParam": 1
-        ]
-        
-        let httpMethod = WebClient.HTTPMethod.PUT(params: body)
+        let body = MockCodableObject(title: "hi", message: "its me again")
         let promiseExpectation = expectation(description: "promise should resolve with mock object")
-        subject.request(url!, headers: headers, method: httpMethod).then { (response: MockCodableObject) -> Void in
+        subject.request(url!, headers: headers, requestBody: body, method: .PUT).then { (response: MockCodableObject) -> Void in
             XCTAssertEqual(mockObject.title, response.title)
             XCTAssertEqual(mockObject.message, response.message)
             promiseExpectation.fulfill()
@@ -77,13 +73,9 @@ class WebClientTests: XCTestCase {
         let headers: [String : String] = [
             "headerKey": "headerValue"
         ]
-        let body: [String : Any] = [
-            "bodyParam": 1
-        ]
-        
-        let httpMethod = WebClient.HTTPMethod.PATCH(params: body)
+        let body = MockCodableObject(title: "hi", message: "its me again")
         let promiseExpectation = expectation(description: "promise should resolve with mock object")
-        subject.request(url!, headers: headers, method: httpMethod).then { (response: MockCodableObject) -> Void in
+        subject.request(url!, headers: headers, requestBody: body, method: .PATCH).then { (response: MockCodableObject) -> Void in
             XCTAssertEqual(mockObject.title, response.title)
             XCTAssertEqual(mockObject.message, response.message)
             promiseExpectation.fulfill()
@@ -106,13 +98,9 @@ class WebClientTests: XCTestCase {
         let headers: [String : String] = [
             "headerKey": "headerValue"
         ]
-        let body: [String : Any] = [
-            "bodyParam": 1
-        ]
-        
-        let httpMethod = WebClient.HTTPMethod.POST(params: body)
+        let body = MockCodableObject(title: "hi", message: "its me again")
         let promiseExpectation = expectation(description: "promise should resolve with mock object")
-        subject.request(url!, headers: headers, method: httpMethod).then { (response: MockCodableObject) -> Void in
+        subject.request(url!, headers: headers, requestBody: body, method: .POST).then { (response: MockCodableObject) -> Void in
             XCTAssertEqual(mockObject.title, response.title)
             XCTAssertEqual(mockObject.message, response.message)
             promiseExpectation.fulfill()
@@ -135,13 +123,9 @@ class WebClientTests: XCTestCase {
         let headers: [String : String] = [
             "headerKey": "headerValue"
         ]
-        let body: [String : Any] = [
-            "bodyParam": 1
-        ]
-        
-        let httpMethod = WebClient.HTTPMethod.DELETE(params: body)
+        let body = MockCodableObject(title: "hi", message: "its me again")
         let promiseExpectation = expectation(description: "promise should resolve with mock object")
-        subject.request(url!, headers: headers, method: httpMethod).then { (response: MockCodableObject) -> Void in
+        subject.request(url!, headers: headers, requestBody: body, method: .DELETE).then { (response: MockCodableObject) -> Void in
             XCTAssertEqual(mockObject.title, response.title)
             XCTAssertEqual(mockObject.message, response.message)
             promiseExpectation.fulfill()
@@ -166,13 +150,9 @@ class WebClientTests: XCTestCase {
         let headers: [String : String] = [
             "headerKey": "headerValue"
         ]
-        let body: [String : Any] = [
-            "bodyParam": 1
-        ]
-        
-        let httpMethod = WebClient.HTTPMethod.POST(params: body)
+        let body = MockCodableObject(title: "hi", message: "its me again")
         let promiseExpectation = expectation(description: "promise should reject with error")
-        subject.request(url!, headers: headers, method: httpMethod).then { (response: MockCodableObject) -> Void in
+        subject.request(url!, headers: headers, requestBody: body, method: .POST).then { (response: MockCodableObject) -> Void in
             // ignore
         }.catch { error in
             let error = error as NSError
@@ -199,13 +179,8 @@ class WebClientTests: XCTestCase {
         let headers: [String : String] = [
             "headerKey": "headerValue"
         ]
-        let body: [String : Any] = [
-            "bodyParam": 1
-        ]
-        
-        let httpMethod = WebClient.HTTPMethod.POST(params: body)
         let promiseExpectation = expectation(description: "promise should reject with error")
-        subject.request(url!, headers: headers, method: httpMethod).then { (response: MockCodableObject) -> Void in
+        subject.request(url!, headers: headers, method: .POST).then { (response: MockCodableObject) -> Void in
             // ignore
         }.catch { error in
                 let error = error as NSError
@@ -221,7 +196,7 @@ class WebClientTests: XCTestCase {
     }
 }
 
-fileprivate class JSONParserMock: WebClientJSONParser {
+fileprivate class JSONParserMock: JSONParserProtocol {
     var didCallDecode = false
     var valueToReturn: Decodable!
     var error: NSError?
@@ -230,6 +205,20 @@ fileprivate class JSONParserMock: WebClientJSONParser {
             throw error
         } else {
             return valueToReturn as! T
+        }
+    }
+}
+
+fileprivate class JSONEncoderMock: JSONEncoderProtocol {
+    var didCallEncode = false
+    var valueToReturn: Data!
+    var error: NSError?
+    
+    func encode<T>(_ value: T) throws -> Data where T : Encodable {
+        if let error = error {
+            throw error
+        } else {
+            return valueToReturn
         }
     }
 }
@@ -256,9 +245,3 @@ fileprivate struct MockCodableObject: Codable {
 fileprivate struct BadJSONObject {
     var title: String
 }
-
-
-
-
-
-
