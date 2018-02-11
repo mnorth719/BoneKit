@@ -1,5 +1,5 @@
 /*
- Atomic
+ Observable
  
  Created by Matt  North on 8/6/17.
  Copyright © 2017 Matt North. All rights reserved.
