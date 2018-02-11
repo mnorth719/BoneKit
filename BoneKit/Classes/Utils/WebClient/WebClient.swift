@@ -85,15 +85,11 @@ public class WebClient {
     
     private func decodableRequestPromise<T: Decodable>(for urlRequest: URLRequest) -> Promise<T> {
         return Promise { resolve, reject in
-            do {
-                urlSession.dataTask(with: urlRequest).then(on: parsingQueue) {[weak self] result -> Void in
-                    guard let `self` = self else { return }
-                    let mapped = try self.parser.decode(T.self, from: result)
-                    resolve(mapped)
-                }.catch { error in
-                    reject(error)
-                }
-            } catch  {
+            urlSession.dataTask(with: urlRequest).then(on: parsingQueue) {[weak self] result -> Void in
+                guard let `self` = self else { return }
+                let mapped = try self.parser.decode(T.self, from: result)
+                resolve(mapped)
+            }.catch { error in
                 reject(error)
             }
         }
