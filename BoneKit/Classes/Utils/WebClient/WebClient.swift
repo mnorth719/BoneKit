@@ -142,6 +142,9 @@ fileprivate struct RequestFactory {
         urlRequest.httpMethod = method.rawValue
         urlRequest.httpBody = try? encoder.encode(requestBody)
         
+        let contentLength = urlRequest.httpBody?.count ?? 0
+        urlRequest.addValue("\(contentLength)", forHTTPHeaderField: "Content-Length")
+        
         if let headers = headers {
             for key in headers.keys {
                 urlRequest.addValue(headers[key]!, forHTTPHeaderField: key)
@@ -154,6 +157,7 @@ fileprivate struct RequestFactory {
     func request(for url: URL, headers: [String: String]?, method: WebClient.HTTPMethod) throws -> URLRequest {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
+        urlRequest.addValue("0", forHTTPHeaderField: "Content-Length")
         
         if let headers = headers {
             for key in headers.keys {
