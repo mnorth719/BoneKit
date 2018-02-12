@@ -24,14 +24,37 @@ extension URLSession: URLSessionProtocol {}
 extension JSONDecoder: JSONParserProtocol {}
 extension JSONEncoder: JSONEncoderProtocol {}
 
-public class WebClient {
+public struct WebClientOptions: OptionSet {
+    public static let allowsSelfSignedCerts = WebClientOptions(rawValue: 1 << 0)
     
-    public init(urlSession: URLSessionProtocol = URLSession.shared,
+    public let rawValue: Int
+    public init(rawValue: Int) {
+        self.rawValue = rawValue
+    }
+}
+
+public class WebClient: NSObject, URLSessionDelegate {
+    public enum ErrorType: Error {
+        case invalidResponse
+    }
+    
+    public init(urlSession: URLSessionProtocol? = nil,
                 parser: JSONParserProtocol = JSONDecoder(),
-                jsonEncoder: JSONEncoderProtocol = JSONEncoder()) {
+                jsonEncoder: JSONEncoderProtocol = JSONEncoder(),
+                options: WebClientOptions = []) {
         self.parser = parser
-        self.urlSession = urlSession
         self.encoder = jsonEncoder
+        self.options = options
+        super.init()
+    
+        guard let session = urlSession else {
+            self.urlSession = URLSession(configuration: URLSessionConfiguration.default,
+                                         delegate: self,
+                                         delegateQueue: OperationQueue.main)
+            return
+        }
+        
+        self.urlSession = session
     }
     
     public enum HTTPMethod {
@@ -57,10 +80,11 @@ public class WebClient {
         }
     }
     
-    private var urlSession: URLSessionProtocol
+    private var urlSession: URLSessionProtocol!
     private var parser: JSONParserProtocol
     private var encoder: JSONEncoderProtocol
     private let requestFactory = RequestFactory()
+    private var options: WebClientOptions
     private var parsingQueue = DispatchQueue(label: "com.mattkit.web_parse_queue",
                                              qos: .userInitiated,
                                              attributes: DispatchQueue.Attributes.concurrent)
@@ -94,7 +118,18 @@ public class WebClient {
             }
         }
     }
+    
+    public func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        
+        if options.contains(.allowsSelfSignedCerts) {
+            completionHandler(.useCredential, URLCredential(trust: challenge.protectionSpace.serverTrust!))
+        } else {
+            completionHandler(.performDefaultHandling, nil)
+        }
+    }
+    
 }
+
 fileprivate struct RequestFactory {
     private var encoder: JSONEncoderProtocol
     
@@ -106,6 +141,9 @@ fileprivate struct RequestFactory {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
         urlRequest.httpBody = try? encoder.encode(requestBody)
+        
+        let contentLength = urlRequest.httpBody?.count ?? 0
+        urlRequest.addValue("\(contentLength)", forHTTPHeaderField: "Content-Length")
         
         if let headers = headers {
             for key in headers.keys {
@@ -119,6 +157,7 @@ fileprivate struct RequestFactory {
     func request(for url: URL, headers: [String: String]?, method: WebClient.HTTPMethod) throws -> URLRequest {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
+        urlRequest.addValue("0", forHTTPHeaderField: "Content-Length")
         
         if let headers = headers {
             for key in headers.keys {
