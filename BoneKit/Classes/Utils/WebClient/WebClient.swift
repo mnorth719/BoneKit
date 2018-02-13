@@ -45,6 +45,7 @@ public class WebClient: NSObject, URLSessionDelegate {
         self.parser = parser
         self.encoder = jsonEncoder
         self.options = options
+        self.requestFactory = RequestFactory(encoder: encoder)
         super.init()
     
         guard let session = urlSession else {
@@ -83,7 +84,7 @@ public class WebClient: NSObject, URLSessionDelegate {
     private var urlSession: URLSessionProtocol!
     private var parser: JSONParserProtocol
     private var encoder: JSONEncoderProtocol
-    private let requestFactory = RequestFactory()
+    private let requestFactory: RequestFactory
     private var options: WebClientOptions
     private var parsingQueue = DispatchQueue(label: "com.mattkit.web_parse_queue",
                                              qos: .userInitiated,
