@@ -89,7 +89,7 @@ extension UIView {
             heightAnchor.constraint(equalTo: view.heightAnchor)]
   }
 
-  @discardableResult func placeBlow(view: UIView, withOffset offset: CGFloat = 0) -> Self {
+  @discardableResult func placeBelow(view: UIView, withOffset offset: CGFloat = 0) -> Self {
     topAnchor.constraint(equalTo: view.bottomAnchor, constant: offset).isActive = true
     return self
   }
